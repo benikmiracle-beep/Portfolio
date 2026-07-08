@@ -597,25 +597,47 @@ nav a:hover {
   cursor: pointer;
 }
 
-/* Show menu button and shrink everything on mobile */
-@media (max-width: 800px) {
-  .mobile-menu-button { display: block; }
-  nav.nav { display: none; } /* hide desktop nav */
-  mg {width: 250px; }
+@media (max-width: 901px) {
+  .mobile-menu-button {
+    display: block;
+  }
+  .nav {
+    display: none;
+  }
+  .mobile-menu {
+    display: none;
+  }
+  .site-header {
+    padding: 10px 0;
+  }
+  .header-inner {
+    padding: 0px 10px;
+    gap: 0.5rem;
+  }
+  .brand-name {
+    font-size: 1rem;
+  }
 
-  body { font-size: 13px; }
-  h1 { font-size: 1.2rem; }
-  h2 { font-size: 1rem; }
-  .hero { padding: 30px 0; }
-  .about-grid {display: flex;}
-  .hero-inner { grid-template-columns: 1fr; gap: 1rem; }
-  .project-card { min-height: 120px; }
-  .project-thumb { height: 100px; }
-  .projects-grid { grid-template-columns: 1fr; gap: 10px; }
+p {
+    font-size: 14px;
+    line-height: 1.4;
+    width: 100%;
+  }
+
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr;
+}
 }
 
 /* Extreme small phones (≤320px) */
-@media (max-width: 320px) {
+@media (max-width: 529px) {
   body { font-size: 11px; line-height: 1.2; }
 
   h1 { font-size: 14px; }
@@ -630,8 +652,17 @@ nav a:hover {
   .profile-picture {width: 40px; height: 40px;}
 
   .hero { padding: 15px 0; }
-  .hero-inner { gap: 0.5rem; padding: 12px;}
+  .hero-inner {
+    display: flex;
+    flex-direction: column; /* developer.js drops down */
+    gap: 10px;
+    gap: 0.5rem; 
+    padding: 12px;}
   .hero h1 { font-size: 1rem; }
+  .hero-text {
+    width: 100%;
+    padding: 12px;
+  }
 
   .code-card {
     position: relative;
@@ -692,7 +723,8 @@ nav a:hover {
   .about-header,
   .skills {
     position: relative;
-    z-index: 1; /* keep text above */
+    z-index: 1;
+    width: 100%; /* keep text above */
   }
 
 
@@ -704,16 +736,32 @@ nav a:hover {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* exactly two per row */
     gap: 10px;
+    height: auto; /* adjust height for smaller screens */
     }
-
+    
   .project-card {
-    min-height: 120px;
     font-size: 12px;
-    padding: 8px;
+    padding: 0px;
+  }
+
+  .project-desc {
+    width: 90%;
+  }
+
+  .link {
+    font-size: 11px;
   }
 
   .project-thumb {
-    height: 100%;
+    width: 100%;
+    height: auto;
+    min-height: 120px; /* ensures visible size */
+    object-fit: cover; /* keeps image proportions */
+    border-radius: 6px;
+  }
+
+  .thumbnail-placeholder {
+    font-size: 10px;
   }
 
   .project-title { font-size: 12px; }

@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Benik Miracle — Portfolio</title>
+    <meta name="description" content="Benik Miracle — Frontend Developer, Backend Developer, UI/UX Designer. Self-taught full-stack developer building real projects." />
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <div class="profile-picture-container"><img class="profile-picture" src="images/0093c48d2ae821657268c96cd809d016.png" alt="profile-image"></div>
+          <div class="brand-name">Benik Miracle</div>
+        </div>
+        <nav class="nav">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button class="mobile-menu-button" aria-label="Toggle menu">☰ Menu</button>
+        <nav class="mobile-menu">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+
+      
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="container hero-inner">
+          <div class="hero-text">
+            <h1>Benik Miracle</h1>
+            <p class="subtitle">Web Developer • Building modern web experiences</p>
+            <p class="lead">I'm a self-taught web developer passonate about building clea, responsive, and user-friendly websites. I'm currently improving my JavaScript skills and working towards be coming a full-stack developer.</p>
+            <div class="hero-ctas">
+              <a class="btn primary" href="#projects">View Projects</a>
+              <a class="btn ghost" href="Benik_Miracle_Resume.pdf" download>Download CV</a>
+            </div>
+          </div>
+          <div class="code-card">
+            <div class="code-header">
+              <span class="red"></span>
+              <span class="yellow"></span>
+              <span class="green"></span>
+
+              <p>developer.js</p>
+            </div>
+
+            <section>
+              <div class="code-container">
+                <pre><code id="developer-info"></code></pre>
+              </div>
+            </section>
+            <script>
+const developer = {
+name: "Benik Miracle",
+role: "Aspiring Full-Stack Developer",
+location: "Nigeria",
+skills: ["HTML, CSS, JavaScript"],
+learning: ["Backend Development"],
+status: "Open to Internship"
+};
+
+const text = `
+  name: ${developer.name},
+  role: ${developer.role},
+  location: ${developer.location},
+  skills: [${developer.skills.join('", "')}],
+  learning: [${developer.learning.join('", "')}],
+  status: ${developer.status}
+`;
+
+const element = document.getElementById("developer-info");
+let index = 0;
+
+function typeEffect() {
+  if (index < text.length) {
+    element.innerHTML = text.substring(0, index) + '<span class="cursor"></span>';
+    index++;
+    setTimeout(typeEffect, 40); // Adjust speed here
+  } else {
+    element.innerHTML = text; // Remove cursor when done
+  }
+}
+
+window.onload = typeEffect;
+            </script>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about">
+        <div class="container">
+         <h2>About Me</h2>
+          <div class="about-grid">
+            <div class="icon-container">
+              <img src="images/Copilot_20260707_1545011.png" alt="Code Icon" class="glow-icon">
+            </div>
+            <div class="about-text">
+              <p>I'm a self-taught software developer currently focused on building real-world skills in frontend and backend development. I also work with Figma for UI design and enjoy creating clean, simple, and functional interfaces.</p>
+              <p>My goal is to grow into a full-stack developer and start building projects that solve real problems while also earning from my skills through internships or freelance work.</p>
+
+              <h3>Skills</h3>
+              <ul class="skills">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>GitHub</li>
+                <li>Git</li>
+                <li>Responsive Web Design</li>
+                <li>Problem Solving</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="projects-section">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="projects-grid">
+          <!-- Project Card 1 -->
+          <article class="project-card">
+            <div class="project-thumb">
+              <div class="portfolio-anim" aria-live="polite" aria-label="Portfolio preview animation">
+                <!-- Slide 1: Layout mockup -->
+                <div class="pa-slide" data-label="Portfolio layout preview">
+                  <svg viewBox="0 0 120 80" class="pa-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+                    <rect rx="8" width="120" height="80" fill="#071026"/>
+                    <rect x="8" y="8" width="104" height="18" rx="4" fill="#0f1724"/>
+                    <rect x="8" y="30" width="60" height="10" rx="3" fill="#0f1724"/>
+                    <rect x="8" y="44" width="40" height="10" rx="3" fill="#0f1724"/>
+                    <g fill="#58a6ff">
+                      <rect x="76" y="30" width="36" height="24" rx="3"/>
+                      <path d="M82 36h12v2H82zM82 40h12v2H82z" fill="#071026"/>
+                    </g>
+                  </svg>
+                </div>
+
+                <!-- Slide 2: Code shimmer -->
+                <div class="pa-slide" data-label="Portfolio code preview">
+                  <svg viewBox="0 0 120 80" class="pa-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+                    <rect rx="8" width="120" height="80" fill="#071026"/>
+                    <g fill="#0f1724">
+                      <rect x="10" y="12" width="100" height="56" rx="6"/>
+                    </g>
+                    <g class="shimmer" fill="#58a6ff" opacity="0.95">
+                      <rect x="18" y="20" width="84" height="6" rx="3"/>
+                      <rect x="18" y="30" width="64" height="6" rx="3"/>
+                      <rect x="18" y="40" width="72" height="6" rx="3"/>
+                      <rect x="18" y="50" width="48" height="6" rx="3"/>
+                    </g>
+                  </svg>
+                </div>
+
+                <!-- Slide 3: Device mockup -->
+                <div class="pa-slide" data-label="Portfolio device preview">
+                  <svg viewBox="0 0 120 80" class="pa-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+                    <rect rx="8" width="120" height="80" fill="#071026"/>
+                    <rect x="14" y="10" width="92" height="60" rx="6" fill="#0f1724"/>
+                    <rect x="22" y="18" width="76" height="36" rx="4" fill="#071026"/>
+                    <g fill="#58a6ff">
+                      <rect x="26" y="22" width="28" height="6" rx="3"/>
+                      <rect x="26" y="32" width="44" height="6" rx="3"/>
+                    </g>
+                    <circle cx="60" cy="58" r="3" fill="#58a6ff"/>
+                  </svg>
+                </div>
+
+                <!-- Slide 4: Grid reveal -->
+                <div class="pa-slide" data-label="Portfolio grid preview">
+                  <svg viewBox="0 0 120 80" class="pa-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+                    <rect rx="8" width="120" height="80" fill="#071026"/>
+                    <g fill="#0f1724">
+                      <rect x="10" y="10" width="48" height="28" rx="4"/>
+                      <rect x="62" y="10" width="48" height="28" rx="4"/>
+                      <rect x="10" y="42" width="48" height="28" rx="4"/>
+                      <rect x="62" y="42" width="48" height="28" rx="4"/>
+                    </g>
+                    <g class="grid-accent" fill="#58a6ff" opacity="0.95">
+                      <rect x="14" y="14" width="40" height="8" rx="3"/>
+                      <rect x="66" y="14" width="40" height="8" rx="3"/>
+                      <rect x="14" y="46" width="40" height="8" rx="3"/>
+                      <rect x="66" y="46" width="40" height="8" rx="3"/>
+                    </g>
+                  </svg>
+                </div>
+
+                <script>
+                  (function(){
+                    const container = document.querySelector('.portfolio-anim');
+                    if(!container) return;
+                    const slides = Array.from(container.querySelectorAll('.pa-slide'));
+                    let idx = 0;
+                    const interval = 2500;
+                    let timer = null;
+
+                    function show(i){
+                      slides.forEach((s, j) => s.classList.toggle('active', j === i));
+                      const label = slides[i]?.getAttribute('data-label') || 'Portfolio preview';
+                      container.setAttribute('aria-label', label);
+                    }
+
+                    function start(){
+                      stop();
+                      timer = setInterval(() => {
+                        idx = (idx + 1) % slides.length;
+                        show(idx);
+                      }, interval);
+                    }
+
+                    function stop(){
+                      if(timer){ clearInterval(timer); timer = null; }
+                    }
+
+                    container.addEventListener('mouseenter', stop);
+                    container.addEventListener('mouseleave', start);
+                    container.addEventListener('focusin', stop);
+                    container.addEventListener('focusout', start);
+
+                    // Initialize
+                    show(idx);
+                    start();
+                  })();
+                </script>
+
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Portfolio Website</h3>
+              <div class="tech-row">
+                <span class="tech">HTML5</span>
+                <span class="tech">CSS3</span>
+                <span class="tech">JavaScript</span>
+              </div>
+              <p class="project-desc">
+                Personal website built using HTML, CSS, and JavaScript to showcase skills and experience.
+              </p>
+              <div class="project-links">
+                <a href="https://github.com/benikmiracle-beep" class="link" target="_blank">GitHub</a>
+                <a href="https://benikmiracle-beep.github.io/portfolio/" class="link" target="_blank">Live Demo</a>
+                <a href="#" class="link muted">Case Study</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 2 -->
+          <article class="project-card">
+            <div class="project-thumb placeholder">
+              <div class="placeholder-box">Coming Soon</div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">UI Designs</h3>
+              <div class="tech-row">
+                <span class="tech">Figma</span>
+              </div>
+              <p class="project-desc">
+                Practice UI layouts and components created in Figma to explore design principles and improve interface aesthetics.
+              </p>
+              <div class="project-links">
+                <a href="#" class="link">View Designs</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 3 -->
+          <article class="project-card">
+            <div class="project-thumb placeholder">
+              <div class="placeholder-box">In Progress</div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Backend Practice Projects</h3>
+              <div class="tech-row">
+                <span class="tech">Node.js</span>
+                <span class="tech">Express</span>
+              </div>
+              <p class="project-desc">
+                Learning backend development with Node.js and Express — projects in progress.
+              </p>
+              <div class="project-links">
+                <span class="link muted">More: Coming soon</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="projects-note">Actively developing new projects — more updates coming soon.</p>
+      </section>
+
+
+      <section id="contact" class="contact">
+        <div class="container">
+          <h2>Contact</h2>
+          <p>Email: <a href="mailto:benikmiracle@gmail.com">benikmiracle@gmail.com</a></p>
+          <p>GitHub: <a href="https://github.com/benikmiracle-beep" id="github-link" target="_blank">benikmiracle-beep</a></p>
+          <form id="contact-form" class="contact-form">
+            <label>
+              Your name
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              Your email
+              <input type="email" name="email" required />
+            </label>
+            <label>
+              Message
+              <textarea name="message" rows="4" required></textarea>
+            </label>
+            <button class="btn primary" type="submit">Send message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <strong>Benik Miracle</strong> — Self-taught developer. Currently improving JavaScript and building full-stack projects.</p>
+      </div>
+    </footer>
+
+    <script src="script.js">
+      // Simple contact form handler (demo only)
+      document.getElementById('contact-form').addEventListener('submit', function(e){
+        e.preventDefault();
+        const name = this.name.value.trim();
+        const email = this.email.value.trim();
+        const message = this.message.value.trim();
+        if(!name || !email || !message){
+          alert('Please complete all fields.');
+          return;
+        }
+        // Replace with real submission endpoint or email service
+        alert('Thanks, ' + name + '. Message received. I will get back to you at ' + email + '.');
+        this.reset();
+      });
+    </script>
+
+    <script>
+      document.querySelector('.mobile-menu-button').addEventListener('click', function() {
+        const menu = document.querySelector('.mobile-menu');
+        menu.style.display = (menu.style.display === 'flex' ? 'none' : 'flex');
+      });
+    </script>
+
+  </body>
+</html>

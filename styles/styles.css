@@ -621,7 +621,7 @@ nav a:hover {
   h1 { font-size: 14px; }
   h2 { font-size: 13px; }
   h3 { font-size: 12px; }
-  p  { font-size: 11px; width: 280px;}
+  p  { font-size: 11px; width: 250px;}
 
   .site-header { padding-top: 4px; padding-bottom: 4px;}
   .header-inner { padding: 2px; }
@@ -630,7 +630,7 @@ nav a:hover {
   .profile-picture {width: 40px; height: 40px;}
 
   .hero { padding: 15px 0; }
-  .hero-inner { gap: 0.5rem; padding: 1px;}
+  .hero-inner { gap: 0.5rem; padding: 12px;}
   .hero h1 { font-size: 1rem; }
 
   .code-card {
